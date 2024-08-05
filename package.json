@@ -1,6 +1,6 @@
 {
-  "name": "react-time-picker",
-  "version": "0.1.5",
+  "name": "react-time-picker-digital",
+  "version": "0.1.6",
   "description": "A bilingual (English/Persian) and responsive digital time picker library with customizable color options. Perfect for modern web applications requiring dynamic and stylish time selection.",
   "dependencies": {
     "@emotion/react": "^11.13.0",

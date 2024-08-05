@@ -7,7 +7,7 @@ A bilingual (English/Persian) and responsive digital time picker library with cu
 - [TimePicker](#timepicker)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
-  - [usage](#usage)
+  - [Example](#example)
   - [props](#props)
   - [License](#license)
   - [Links](#links)
@@ -21,9 +21,11 @@ You can install the package using npm or yarn:
 npm install digital-time-picker
 ```
 
-## usage
+## Example
 
 Here is an example of how to use the TimePicker component in your React application:
+
+```jsx
 
 import React, { useState } from "react";
 import { TimePicker } from "digital-time-picker";
@@ -52,6 +54,7 @@ sendDataToParent={handleDataFromChild}
 }
 
 export default App;
+```
 
 ## props
 
@@ -72,7 +75,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Links
 
-https://github.com/HosseinAzadpour/set-digitalclock
+https://github.com/HosseinAzadpour/react-time-picker
 
 ## Hashtags
 
