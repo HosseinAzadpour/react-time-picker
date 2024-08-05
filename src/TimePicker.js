@@ -7,10 +7,10 @@ const TimePicker = ({ sendDataToParent, prevPage, nextPage }) => {
   var minuteSelector = useRef();
   var hourEl = useRef();
   var hourSelector = useRef();
-  var [activeHour, setActiveHour] = useState();
+  var [activeHour, setActiveHour] = useState("12");
   var activeHourIndx = 59;
   var activeMinuteIndx = 299;
-  var [activeMinute, setActiveMinute] = useState();
+  var [activeMinute, setActiveMinute] = useState("00");
 
   var Hours = [
     "00",

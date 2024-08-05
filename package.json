@@ -1,14 +1,22 @@
 {
   "name": "react-time-picker-digital",
-  "version": "0.1.6",
+  "version": "0.1.8",
+  "keywords": [
+    "react",
+    "time-picker",
+    "component",
+    "English/Persian",
+    "ui",
+    "timePicker"
+  ],
+  "author": "Hossein Azadpour",
+  "license": "MIT",
   "description": "A bilingual (English/Persian) and responsive digital time picker library with customizable color options. Perfect for modern web applications requiring dynamic and stylish time selection.",
   "dependencies": {
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^5.16.6",
     "@mui/material": "^5.16.6",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -46,6 +54,9 @@
     "@babel/cli": "^7.24.8",
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
-    "@babel/preset-react": "^7.24.7"
+    "@babel/preset-react": "^7.24.7",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
+    "jest": "^27.5.1"
   }
 }
