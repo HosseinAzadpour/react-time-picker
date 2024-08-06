@@ -14,7 +14,10 @@ const TimePicker = _ref => {
     prevPage,
     nextPage,
     language,
-    color
+    color,
+    backgroundColor,
+    textColor,
+    numbersColor
   } = _ref;
   var minuteEl = (0, _react.useRef)();
   var minuteSelector = (0, _react.useRef)();
@@ -53,7 +56,10 @@ const TimePicker = _ref => {
       top: document.querySelectorAll("#minute")[activeMinuteIndx].offsetTop,
       behavior: "smooth"
     });
-    color != undefined && document.querySelector(":root").style.setProperty("--nav", color);
+    color != undefined && document.querySelector(":root").style.setProperty("--secondary", color);
+    backgroundColor != undefined && document.querySelector(":root").style.setProperty("--primary", backgroundColor);
+    numbersColor != undefined && document.querySelector(":root").style.setProperty("--number", numbersColor);
+    textColor != undefined && document.querySelector(":root").style.setProperty("--text", textColor);
     language == "fa" ? document.querySelector(":root").style.setProperty("--dir", "rtl") : document.querySelector(":root").style.setProperty("--dir", "ltr");
   }, [document.readyState]);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
