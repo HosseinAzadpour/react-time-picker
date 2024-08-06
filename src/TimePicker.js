@@ -6,6 +6,9 @@ const TimePicker = ({
   nextPage,
   language,
   color,
+  backgroundColor,
+  textColor,
+  numbersColor,
 }) => {
   var minuteEl = useRef();
   var minuteSelector = useRef();
@@ -900,7 +903,17 @@ const TimePicker = ({
       behavior: "smooth",
     });
     color != undefined &&
-      document.querySelector(":root").style.setProperty("--nav", color);
+      document.querySelector(":root").style.setProperty("--secondary", color);
+    backgroundColor != undefined &&
+      document
+        .querySelector(":root")
+        .style.setProperty("--primary", backgroundColor);
+    numbersColor != undefined &&
+      document
+        .querySelector(":root")
+        .style.setProperty("--number", numbersColor);
+    textColor != undefined &&
+      document.querySelector(":root").style.setProperty("--text", textColor);
 
     language == "fa"
       ? document.querySelector(":root").style.setProperty("--dir", "rtl")

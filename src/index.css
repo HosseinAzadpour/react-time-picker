@@ -6,11 +6,15 @@
   touch-action: none;
   overflow: hidden;
   padding: 0;
+  background-color: var(--primary);
   --text: #000000;
   --border: #bababa;
-  --nav: #2088B4;
+  --number: #bababa;
+  --primary: #fff;
+  --secondary: #2088B4;
   --padding: 0;
   --dir: rtl;
+
 }
 
 

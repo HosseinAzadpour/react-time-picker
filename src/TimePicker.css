@@ -61,7 +61,7 @@
   align-items: center;
   font-size: 9vh;
   border-bottom: 0.1vh solid var(--border);
-  color: var(--border);
+  color: var(--number);
   transition: 0.5s;
   scroll-snap-align: center;
   scroll-snap-stop: normal;
@@ -83,7 +83,7 @@
 
 
 .container .timer h4.active {
-  color: var(--nav);
+  color: var(--secondary);
 
 }
 

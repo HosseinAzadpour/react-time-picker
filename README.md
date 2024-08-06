@@ -37,10 +37,8 @@ Easy Integration: Simply import the component and use it in your project with mi
 
 Here is a screenshot of the `TimePicker` component:
 
-![TimePicker Demo](https://github.com/HosseinAzadpour/react-time-picker-digital/blob/users/TimePickerEnDesk.png)
+![TimePicker Demo](https://github.com/HosseinAzadpour/react-time-picker-digital/blob/users/TimePickerDesktopSize%20.png)
 ![TimePicker Demo](https://github.com/HosseinAzadpour/react-time-picker-digital/blob/users/TimePickerFaDesk.png)
-![TimePicker Demo](https://github.com/HosseinAzadpour/react-time-picker-digital/blob/users/TimePickerEnPhone.png)
-![TimePicker Demo](https://github.com/HosseinAzadpour/react-time-picker-digital/blob/users/TimePickerFaPhone.png)
 
 ## Example
 
@@ -64,8 +62,11 @@ function App() {
   return (
     <div className='App'>
       <TimePicker
-        language={"en"}
+        backgroundColor={"#fff"}
         color={"crimson"}
+        textColor={"black"}
+        numbersColor={"gray"}
+        language={"en"}
         prevPage={"/"}
         nextPage={"/about"}
         sendDataToParent={handleDataFromChild}
@@ -74,8 +75,8 @@ function App() {
   );
 }
 
-
 export default App;
+
 ```
 
 ## props
@@ -92,6 +93,9 @@ nextPage string Required Link to the next page.
 | `nextPage`         | `string`   | Required  | The URL to navigate to when the confirm button is clicked.                                                |
 | `language`         | `string`   | "en"      | Determines the language of the timepicker. The user can select between Persian ('fa') and English ('en'). |
 | `color`            | `string`   | "#2088B4" | Sets the color theme of the timepicker. The user can select any valid CSS color.                          |
+| `backgroundColor`  | `string`   | "#fff"    | Sets the color theme of the timepicker. The user can select any valid CSS color.                          |
+| `textColor`        | `string`   | "#000000" | Sets the color theme of the timepicker. The user can select any valid CSS color.                          |
+| `numbersColor`     | `string`   | "#bababa" | Sets the color theme of the timepicker. The user can select any valid CSS color.                          |
 
 ## License
 
