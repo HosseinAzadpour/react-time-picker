@@ -37,7 +37,10 @@ Easy Integration: Simply import the component and use it in your project with mi
 
 Here is a screenshot of the `TimePicker` component:
 
-![TimePicker Demo](https://github.com/HosseinAzadpour/react-time-picker-digital/blob/users/TimePickerFa.png)
+![TimePicker Demo](https://github.com/HosseinAzadpour/react-time-picker-digital/blob/users/TimePickerEnDesk.png)
+![TimePicker Demo](https://github.com/HosseinAzadpour/react-time-picker-digital/blob/users/TimePickerEnPhone.png)
+![TimePicker Demo](https://github.com/HosseinAzadpour/react-time-picker-digital/blob/users/TimePickerFaDesk.png)
+![TimePicker Demo](https://github.com/HosseinAzadpour/react-time-picker-digital/blob/users/TimePickerFaPhone.png)
 
 ## Example
 
@@ -82,11 +85,13 @@ sendDataToParent function Required Function to send the selected time to the par
 prevPage string Required Link to the previous page.
 nextPage string Required Link to the next page.
 
-| Prop               | Type       | Default  | Description                                                                       |
-| ------------------ | ---------- | -------- | --------------------------------------------------------------------------------- |
-| `sendDataToParent` | `function` | Required | A callback function to send the selected hour and minute to the parent component. |
-| `prevPage`         | `string`   | Required | The URL to navigate to when the back button is clicked.                           |
-| `nextPage`         | `string`   | Required | The URL to navigate to when the confirm button is clicked.                        |
+| Prop               | Type       | Default   | Description                                                                                               |
+| ------------------ | ---------- | --------- | --------------------------------------------------------------------------------------------------------- |
+| `sendDataToParent` | `function` | Required  | A callback function to send the selected hour and minute to the parent component.                         |
+| `prevPage`         | `string`   | Required  | The URL to navigate to when the back button is clicked.                                                   |
+| `nextPage`         | `string`   | Required  | The URL to navigate to when the confirm button is clicked.                                                |
+| `language`         | `string`   | "en"      | Determines the language of the timepicker. The user can select between Persian ('fa') and English ('en'). |
+| `color`            | `string`   | "#2088B4" | Sets the color theme of the timepicker. The user can select any valid CSS color.                          |
 
 ## License
 

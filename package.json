@@ -1,6 +1,6 @@
 {
   "name": "react-time-picker-digital",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/HosseinAzadpour/react-time-picker-digital",
   "repository": {
     "type": "git",
@@ -9,10 +9,17 @@
   "keywords": [
     "react",
     "time-picker",
-    "component",
-    "English/Persian",
+    "Component",
+    "English",
+    "Persian",
     "ui",
-    "timePicker"
+    "responsive",
+    "timePicker",
+    "theme customization",
+    "date and time picker",
+    "react widget",
+    "easy to use",
+    "open source"
   ],
   "author": "Hossein Azadpour",
   "license": "MIT",
