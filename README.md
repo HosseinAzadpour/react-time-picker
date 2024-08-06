@@ -49,27 +49,28 @@ import React, { useState } from "react";
 import { TimePicker } from "react-time-picker-digital";
 
 function App() {
-const [hour, setHour] = useState();
-const [minute, setMinute] = useState();
+  var [hour, setHour] = useState();
+  var [minute, setMinute] = useState();
+  function handleDataFromChild(data) {
+    setHour(data.hour);
+    setMinute(data.minute);
+    console.log("hour", hour);
+    console.log("minute", minute);
+  }
 
-function handleDataFromChild(data) {
-console.log(data);
-setHour(data.hour);
-setMinute(data.minute);
+  return (
+    <div className='App'>
+      <TimePicker
+        language={"en"}
+        color={"crimson"}
+        prevPage={"/"}
+        nextPage={"/about"}
+        sendDataToParent={handleDataFromChild}
+      />
+    </div>
+  );
 }
 
-return (
-
-<div className='App'>
-<TimePicker
-prevPage={"/"}
-nextPage={"/about"}
-sendDataToParent={handleDataFromChild}
-/>
-<p>Selected Time: {hour}:{minute}</p>
-</div>
-);
-}
 
 export default App;
 ```

@@ -1,16 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./TimePicker.css";
-
-import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
-const TimePicker = ({ sendDataToParent, prevPage, nextPage }) => {
+const TimePicker = ({
+  sendDataToParent,
+  prevPage,
+  nextPage,
+  language,
+  color,
+}) => {
   var minuteEl = useRef();
   var minuteSelector = useRef();
   var hourEl = useRef();
   var hourSelector = useRef();
-  var [activeHour, setActiveHour] = useState("12");
+  var [activeHour, setActiveHour] = useState();
   var activeHourIndx = 59;
   var activeMinuteIndx = 299;
-  var [activeMinute, setActiveMinute] = useState("00");
+  var [activeMinute, setActiveMinute] = useState();
 
   var Hours = [
     "00",
@@ -895,20 +899,23 @@ const TimePicker = ({ sendDataToParent, prevPage, nextPage }) => {
       top: document.querySelectorAll("#minute")[activeMinuteIndx].offsetTop,
       behavior: "smooth",
     });
+    color != undefined &&
+      document.querySelector(":root").style.setProperty("--nav", color);
+
+    language == "fa"
+      ? document.querySelector(":root").style.setProperty("--dir", "rtl")
+      : document.querySelector(":root").style.setProperty("--dir", "ltr");
   }, [document.readyState]);
 
   return (
     <>
-      <a href={`${prevPage}`}>
-        <ArrowBackIosRoundedIcon className='backIcon'></ArrowBackIosRoundedIcon>
-      </a>
       <div className='timePicker'>
         <section className='addressSection'>
-          <h1>انتخاب زمان</h1>
+          {language == "fa" ? <h1>انتخاب زمان</h1> : <h1>Select Time</h1>}
         </section>
         <div className='container'>
           <div className='timer'>
-            <h2>دقیقه</h2>
+            {language == "fa" ? <h2>دقیقه</h2> : <h2>Minute</h2>}
             <div className='timerContainer' ref={minuteEl}>
               {Minutes.map((item, index) => {
                 return (
@@ -927,8 +934,8 @@ const TimePicker = ({ sendDataToParent, prevPage, nextPage }) => {
             </div>
             <div className='hourSelector' ref={minuteSelector}></div>
           </div>
-          <div className='timer'>
-            <h2>ساعت</h2>
+          <div className='timer' sty>
+            {language == "fa" ? <h2>ساعت</h2> : <h2>Hour</h2>}
             <div className='timerContainer' ref={hourEl}>
               {Hours.map((item, index) => {
                 return (
@@ -948,18 +955,18 @@ const TimePicker = ({ sendDataToParent, prevPage, nextPage }) => {
             <div className='hourSelector' ref={hourSelector}></div>
           </div>
         </div>
-      </div>
-      <div className='buttons'>
-        <a
-          href={`${nextPage}`}
-          onClick={() => {
-            sendDataToParent({ hour: activeHour, minute: activeMinute });
-          }}
-        >
-          تایید
-        </a>
+        <div className='buttons'>
+          <a
+            href={`${nextPage}`}
+            onClick={() => {
+              sendDataToParent({ hour: activeHour, minute: activeMinute });
+            }}
+          >
+            {language == "fa" ? "تایید" : "Confirm"}
+          </a>
 
-        <a href={`${prevPage}`}>لغو</a>
+          <a href={`${prevPage}`}>{language == "fa" ? "لغو" : "Cancel"}</a>
+        </div>
       </div>
     </>
   );
